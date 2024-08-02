@@ -1,0 +1,16 @@
+header {
+  text-align: center;
+}
+
+.main-container {
+  width: 900px;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+
+.root-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
