@@ -92,7 +92,6 @@ export default function CharactersView() {
             {error && <p>{error}</p>}
             <CharactersTable characters={characters}/>
 
-            {/* Button for next and previous page    */}
             { info &&
                 <div className='pagination'>
                     <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous</button>
@@ -100,8 +99,6 @@ export default function CharactersView() {
                     <button onClick={() => setPage(page + 1)} disabled={page === info.pages}>Next</button>
                 </div>
             }
-
-
         </div>
     )
 }

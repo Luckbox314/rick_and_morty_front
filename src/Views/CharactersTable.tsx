@@ -1,4 +1,4 @@
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Character } from '../RickAPI/characters';
 
 export default function CharactersTable({characters}: {characters: Character[]}) {
