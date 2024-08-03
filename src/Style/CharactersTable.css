@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 20px;
+}
+
+th {
+    width: calc(100%/5);
+    background-color: rgb(247, 216, 177);
+}
+
+tbody > tr > td {
+    padding: 4px 6px;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: white;
+}
+
+tbody > tr:hover {
+    cursor: pointer;
+    background-color: #d4d4d4;
+}
+

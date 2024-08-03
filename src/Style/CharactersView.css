@@ -2,4 +2,43 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+
+    label {
+        flex: 1;
+        padding: 10px;
+    }
+
+    * {
+        display: block;
+    }
+
+    span {
+        margin-bottom: 6px;
+    }
+
+    input, select {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2px 6px;
+        height: 5ch;
+        border: 2px solid #dfdab9;
+        border-radius: 5px;
+    }
 }
+
+.pagination {
+    background-color: #e9e5c8;
+
+    border-radius: 5px;
+
+    *:first-child {
+        border-radius: 5px 0 0 5px;
+        margin-right: 10px;
+    }
+
+    *:last-child {
+        border-radius: 0 5px 5px 0;
+        margin-left: 10px
+    }
+}
+

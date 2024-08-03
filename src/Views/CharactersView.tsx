@@ -52,12 +52,12 @@ export default function CharactersView() {
             <div className='search-bar'>
 
                 <label>
-                    name:
+                    <span>name:</span>
                     <input name='name' type="text" value={query.name} onChange={handleInputChange}/>
                 </label>
 
                 <label>
-                    status:
+                    <span>status:</span>
                     <select name='status' value={query.status} onChange={handleInputChange}>
                         <option value="">All</option>
                         <option value="alive">Alive</option>
@@ -67,17 +67,17 @@ export default function CharactersView() {
                 </label>
 
                 <label>
-                    species:
+                    <span>species:</span>
                     <input name='species' type="text" value={query.species} onChange={handleInputChange}/>
                 </label>
 
                 <label>
-                    type:
+                    <span>type:</span>
                     <input name='type' type="text" value={query.type} onChange={handleInputChange}/>
                 </label>
 
                 <label>
-                    gender:
+                    <span>gender:</span>
                     <select name='gender' value={query.gender} onChange={handleInputChange}>
                         <option value="">All</option>
                         <option value="female">Female</option>
@@ -93,11 +93,14 @@ export default function CharactersView() {
             <CharactersTable characters={characters}/>
 
             { info &&
-                <div className='pagination'>
-                    <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous</button>
-                    <span>page {page} of {info.pages}</span>
-                    <button onClick={() => setPage(page + 1)} disabled={page === info.pages}>Next</button>
+                <div className='center'>
+                    <div className='pagination'>
+                        <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous</button>
+                        <span>page {page} of {info.pages}</span>
+                        <button onClick={() => setPage(page + 1)} disabled={page === info.pages}>Next</button>
+                    </div>
                 </div>
+
             }
         </div>
     )

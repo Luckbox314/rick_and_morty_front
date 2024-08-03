@@ -1,5 +1,6 @@
 import { getCharacter , Character } from "../RickAPI/characters";
-import { useLoaderData, LoaderFunctionArgs, Link } from "react-router-dom";
+import { useLoaderData, LoaderFunctionArgs, useNavigate } from "react-router-dom";
+import '../Style/CharacterView.css';
 
 export async function loader({params}: LoaderFunctionArgs<{id: string}> ) {
     if (!params.id) {
@@ -12,20 +13,27 @@ export async function loader({params}: LoaderFunctionArgs<{id: string}> ) {
 
 export default function CharacterView() {
     const { character } = useLoaderData() as { character: Character };
+    const navigate = useNavigate();
 
     return (
         <>
-            <Link to='/'>Back to characters</Link>
-            <div id="character">
-                <h1>{character.name}</h1>
-                <p>ID: {character.id}</p>
-                <p>Specie: {character.species}</p>
-                <p>Gender: {character.gender}</p>
-                <p>Status: {character.status}</p>
-                <p>Type: {character.type}</p>
-                <p>Origin: {character.origin.name}</p>
-                <p>Location: {character.location.name}</p>
-                <img src={character.image} alt={character.name} />
+            <button onClick={() => navigate('/')}>
+                Back to characters
+            </button>
+            <div className="center">
+                <div>
+                    <h1>{character.name}</h1>
+                    <img src={character.image} alt={character.name} />
+                    <div className="info">
+                        <p><b>ID:</b> {character.id}</p>
+                        <p><b>Specie:</b> {character.species}</p>
+                        <p><b>Gender:</b> {character.gender}</p>
+                        <p><b>Status:</b> {character.status}</p>
+                        <p><b>Type:</b> {character.type}</p>
+                        <p><b>Origin:</b> {character.origin.name}</p>
+                        <p><b>Location:</b> {character.location.name}</p>
+                    </div>
+                </div>
             </div>
         </>
     )

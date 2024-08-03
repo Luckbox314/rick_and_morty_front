@@ -14,3 +14,23 @@ header {
   align-items: center;
   width: 100%;
 }
+
+button {
+  border: none;
+  color: white;
+  background-color: #55b837;
+  padding: 10px;
+  min-width: 80px;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #3c8326;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #dfdab9;
+  color: #c2baba ;
+  cursor: not-allowed !important;
+}
