@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from 'react-router-dom';
 import './index.css';
@@ -11,7 +11,7 @@ import ErrorPage from './Views/ErrorPage';
 import CharactersView from './Views/CharactersView';
 import CharacterView, { loader as characterLoader } from './Views/CharacterView';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Root />,

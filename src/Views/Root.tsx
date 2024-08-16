@@ -1,5 +1,5 @@
 import '../Style/Root.css';
-import { Outlet, Link} from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 export async function loader() {
 

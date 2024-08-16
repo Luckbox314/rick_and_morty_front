@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link, Outlet } from 'react-router-dom';
 import CharactersTable from './CharactersTable';
 import { getCharacters } from '../RickAPI/characters';
 import { Character, CharacterResponse, Query } from '../RickAPI/characters';
